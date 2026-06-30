@@ -1,1 +1,3 @@
-# int
+# SK Interview
+
+Interview-focused technical reference.

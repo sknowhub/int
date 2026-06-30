@@ -1,0 +1,129 @@
+title: SK Interview
+
+description: >-
+  Interview-focused technical reference with deep Q&A
+  for every concept across Java and related topics.
+
+url: https://sknowhub.github.io
+baseurl: /int
+source: docs
+permalink: pretty
+
+# ============================================================
+# Exclude non-content files and folders
+# ============================================================
+exclude:
+  - spec/
+  - scripts/
+  - tmp/
+  - site/
+  - memories/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.txt"
+  - .github/
+  - .githooks/
+  - .gitignore
+  - .editorconfig
+  - .markdownlint.json
+
+# ============================================================
+# Theme
+# ============================================================
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+# ============================================================
+# SEARCH
+# Disabled for performance
+# ============================================================
+search_enabled: false
+search: false
+
+# ============================================================
+# Navigation
+# ============================================================
+heading_anchors: true
+
+# Collapse navigation by default
+nav_fold: true
+
+# Avoid dynamic sorting overhead
+# Use nav_order instead
+nav_sort: false
+
+# ============================================================
+# Links
+# ============================================================
+aux_links:
+  GitHub: https://github.com/sknowhub/int
+
+aux_links_new_tab: true
+
+# ============================================================
+# Appearance
+# ============================================================
+color_scheme: light
+callouts_level: quiet
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# ============================================================
+# Code blocks
+# ============================================================
+enable_copy_code_button: true
+
+# ============================================================
+# Prevent Liquid parsing in docs content
+# ============================================================
+defaults:
+  - scope:
+      path: ""
+    values:
+      render_with_liquid: false
+
+  - scope:
+      path: "assets/"
+    values:
+      render_with_liquid: true
+
+# ============================================================
+# Markdown renderer
+# ============================================================
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    block:
+      line_numbers: false
+
+# ============================================================
+# Liquid resilience
+# ============================================================
+liquid:
+  error_mode: warn
+  strict_filters: false
+
+# ============================================================
+# HTML compression
+# ============================================================
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  blanklines: false
+
+# ============================================================
+# CSS compression
+# ============================================================
+sass:
+  style: compressed
